@@ -20,7 +20,7 @@ struct ContentView: View {
     @State private var difficulty: Double = 0.5
     @State private var isShowingQuestions = false
     
-    let skyBlue = Color(red: 0.4, green: 0.6, blue: 0.9)
+    let beige = Color(red: 0.65, green: 0.60, blue: 0.55) // Even darker option
     let darkerGray = Color(red: 0.15, green: 0.15, blue: 0.15)
     let sectionGray = Color(red: 0.25, green: 0.25, blue: 0.25)
     
@@ -29,17 +29,18 @@ struct ContentView: View {
             ZStack {
                 // Background
                 VStack(spacing: 0) {
-                    skyBlue
+                    beige
                         .frame(height: UIScreen.main.bounds.height * 0.15)
                         .overlay(
                             Text("Trivia Game")
-                                .font(.system(size: 45, weight: .bold)) // Increased from 40 to 45
+                                .font(.custom("ChalkboardSE-Bold", size: 45, relativeTo: .title))
+                                .fontWeight(.bold)
                                 .foregroundColor(.white)
-                                .padding(.top, 60),
+                                .padding(.top, 85),
                             alignment: .center // Added alignment parameter
                         )
-                    darkerGray
-                    skyBlue
+                    beige
+                    beige
                         .frame(height: UIScreen.main.bounds.height * 0.15)
                         .overlay(
                             NavigationLink(destination: QuestionView(
@@ -55,7 +56,7 @@ struct ContentView: View {
                                     .foregroundColor(.white)
                                     .frame(maxWidth: .infinity)
                                     .padding()
-                                    .background(Color.green)
+                                    .background(Color(red: 0.6, green: 0.4, blue: 0.5)) // Subtle and sophisticated
                                     .cornerRadius(10)
                             }
                             .padding(.horizontal, 80) // Increased from 50 to 80 for a narrower button
@@ -65,7 +66,7 @@ struct ContentView: View {
                 
                 // Main content
                 VStack(spacing: 20) {
-                    VStack(spacing: 25) {
+                    VStack(spacing: 0) {
                         // Number of questions input
                         TextField("", text: $numberOfQuestionsString)
                             .textFieldStyle(DefaultTextFieldStyle())
@@ -91,6 +92,10 @@ struct ContentView: View {
                                 .padding(.leading, 10)
                             )
                         
+                        Divider()
+                            .background(Color.white.opacity(0.3)) // White divider with some transparency
+                            .padding(.vertical, 12)
+                        
                         // Category selection
                         Button(action: { isCategoryDropdownVisible.toggle() }) {
                             HStack {
@@ -104,6 +109,11 @@ struct ContentView: View {
                                 .foregroundColor(Color(.systemGray4)) // Lighter color
                             }
                         }
+                        .padding(.vertical, 12)
+                        
+                        Divider()
+                            .background(Color.white.opacity(0.3))
+                            .padding(.vertical, 12)
                         
                         // Difficulty section
                         HStack {
@@ -114,6 +124,11 @@ struct ContentView: View {
                                 .accentColor(.blue)
                                 .frame(width: 150)
                         }
+                        .padding(.vertical, 12)
+                        
+                        Divider()
+                            .background(Color.white.opacity(0.3))
+                            .padding(.vertical, 12)
                         
                         // Type selection
                         Button(action: { isTypeDropdownVisible.toggle() }) {
@@ -128,6 +143,11 @@ struct ContentView: View {
                                 .foregroundColor(Color(.systemGray4)) // Lighter color
                             }
                         }
+                        .padding(.vertical, 12)
+                        
+                        Divider()
+                            .background(Color.white.opacity(0.3))
+                            .padding(.vertical, 12)
                         
                         // Timer duration selection
                         Button(action: { isTimerDurationDropdownVisible.toggle() }) {
@@ -142,8 +162,9 @@ struct ContentView: View {
                                 .foregroundColor(Color(.systemGray4)) // Lighter color
                             }
                         }
+                        .padding(.vertical, 12)
                     }
-                    .padding(.vertical, 30)
+                    .padding(.vertical, 20)
                     .padding(.horizontal, 20)
                     .background(sectionGray)
                     .cornerRadius(10)

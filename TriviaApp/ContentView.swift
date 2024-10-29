@@ -20,7 +20,7 @@ struct ContentView: View {
     @State private var difficulty: Double = 0.5
     @State private var isShowingQuestions = false
     
-    let beige = Color(red: 0.65, green: 0.60, blue: 0.55) // Even darker option
+    let beige = Color(red: 0.651, green: 0.600, blue: 0.533)
     let darkerGray = Color(red: 0.15, green: 0.15, blue: 0.15)
     let sectionGray = Color(red: 0.25, green: 0.25, blue: 0.25)
     

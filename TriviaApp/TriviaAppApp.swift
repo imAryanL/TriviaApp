@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct TriviaAppApp: App {
+    @State private var isActive = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if !isActive {
+                LaunchScreenView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                            withAnimation {
+                                self.isActive = true
+                            }
+                        }
+                    }
+            } else {
+                ContentView()
+            }
         }
     }
 }

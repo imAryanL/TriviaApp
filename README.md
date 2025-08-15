@@ -22,6 +22,10 @@ Trivia Game is an app that tests users with fun trivia questions across differen
 - Created an App Icon with the name of the App.
 - Created a LaunchScreen using SwiftUI.
 
+## Demo
+
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/24f8fa15-cb85-4121-bdac-8dbc31f42019)
+
 ## Video Walkthrough
 Here's a walkthrough of the Trivia App operating:
 

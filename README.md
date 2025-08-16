@@ -3,6 +3,10 @@
 ## Description
 Trivia Game is an app that tests users with fun trivia questions across different topics and difficulty levels. Users can customize their game by choosing the number of questions, category, and question type (Multiple Choice or True/False). After answering, the app shows a score, and users can see which answers were correct. It includes a timer to put users under pressure.
 
+## Demo
+
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/24f8fa15-cb85-4121-bdac-8dbc31f42019)
+
 ## Features
 ### Required Features
 - App launches to an Options screen where users can modify the types of questions presented when the game starts:
@@ -21,10 +25,6 @@ Trivia Game is an app that tests users with fun trivia questions across differen
 ### Additional Features
 - Created an App Icon with the name of the App.
 - Created a LaunchScreen using SwiftUI.
-
-## Demo
-
-![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/24f8fa15-cb85-4121-bdac-8dbc31f42019)
 
 ## Video Walkthrough
 Here's a walkthrough of the Trivia App operating:
@@ -49,7 +49,3 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
-
-## Author
-**Aryan Lakhani**  
-[LinkedIn](https://www.linkedin.com/in/jan-aryan/) | [GitHub](https://github.com/imAryanL)
